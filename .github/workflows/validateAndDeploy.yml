@@ -19,16 +19,16 @@ jobs:
         run: npm run lint
   deploy:
     runs-on: ubuntu-latest
-      steps:
-        - name: Use Code
-          uses: actions/checkout@v3
-        - name: Install Node v18
-          uses: actions/setup-node@v3
-          with:
-            node-version: 18
-        - name: Install dependencies
-          run: npm install
-        - name: Build
-          run: npm run build
-        - name: Deploy  
-          run: echo "Fake Deploying "
+    steps:
+      - name: Use Code
+        uses: actions/checkout@v3
+      - name: Install Node v18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm install
+      - name: Build
+        run: npm run build
+      - name: Deploy
+        run: echo "Fake Deploying "
