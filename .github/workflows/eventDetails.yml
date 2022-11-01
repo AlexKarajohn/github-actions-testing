@@ -1,0 +1,11 @@
+name: issue
+run-name: issue
+on:
+  issues:
+    types: [open]
+jobs:
+  render:
+    runs-on: ubuntu-latest
+    steps:
+      - name: render event details
+        uses: echo ${{issues}}
