@@ -8,4 +8,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: render event details
-        uses: echo ${{issues}}
+        run: echo ${{issues}}
