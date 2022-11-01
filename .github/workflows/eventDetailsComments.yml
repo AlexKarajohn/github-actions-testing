@@ -1,5 +1,5 @@
-name: issue_comments
-run-name: issue_comments
+name: issue_comment
+run-name: issue_comment
 on: [issues]
 jobs:
   render:
