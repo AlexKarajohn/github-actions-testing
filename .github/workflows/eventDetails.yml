@@ -8,4 +8,4 @@ jobs:
       - name: render event details
         run: |
           echo ${{toJSON(github)}}
-          echo ${{toJSON(issue)}}
+          echo ${{toJSON(issues)}}
