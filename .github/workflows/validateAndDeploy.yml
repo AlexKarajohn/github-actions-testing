@@ -1,0 +1,21 @@
+name: validate and deploy
+run-name: ${{github.actor}} testing
+on: [push]
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Use Code
+        uses: actions/checkout@v3
+      - name: Install Node v18
+        uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - name: Install dependencies
+        run: npm Install
+      - name: Vitest
+        run: npm run test
+      - name: Linter
+        run: npm run lint
+      - name: Build
+        run: npm run build
