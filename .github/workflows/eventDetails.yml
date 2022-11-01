@@ -1,8 +1,7 @@
 name: issue
 run-name: issue
-on:
-  issues:
-    types: [open]
+on: [issues]
+
 jobs:
   render:
     runs-on: ubuntu-latest
