@@ -1,6 +1,6 @@
 name: issue_comment
 run-name: issue_comment
-on: [issues]
+on: [issue_comment]
 jobs:
   render:
     runs-on: ubuntu-latest
