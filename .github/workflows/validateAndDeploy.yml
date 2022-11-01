@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: 18
       - name: Install dependencies
-        run: npm Install
+        run: npm install
       - name: Vitest
         run: npm run test
       - name: Linter
