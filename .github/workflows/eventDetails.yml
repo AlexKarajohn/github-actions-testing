@@ -6,6 +6,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: render event details
-        run: |
-          echo ${{toJSON(github)}}
-          echo ${{toJSON(issues)}}
+        run: echo ${{toJSON(github)}}
