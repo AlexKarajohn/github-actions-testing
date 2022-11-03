@@ -7,7 +7,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - name: Get code
+      - name: Get code!
         uses: actions/checkout@v3
       - name: cache installed dependencies
         uses: actions/cache@v3
