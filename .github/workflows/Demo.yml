@@ -44,6 +44,7 @@ jobs:
           path: test.json
   report:
     runs-on: ubuntu-lates
+    needs: test
     if: failure()
     steps:
       - name: outout
