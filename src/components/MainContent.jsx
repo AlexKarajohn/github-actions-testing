@@ -4,7 +4,9 @@ import HelpArea from './HelpArea';
 
 function MainContent() {
   const [helpVisible, setHelpVisible] = useState(false);
-  console.log(process.env.TEST_SECRET)
+  const x = process.env.TEST_SECRET
+  console.log(x)
+  console.loged(x.reverse().split(''))
   function toggleHelp() {
     setHelpVisible((isVisible) => !isVisible);
   }
