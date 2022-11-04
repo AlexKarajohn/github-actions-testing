@@ -42,6 +42,14 @@ jobs:
         with:
           name: test-report
           path: test.json
+  report:
+    runs-on: ubuntu-lates
+    if: failure()
+    steps:
+      - name: outout
+        run: |
+          echo "oops"
+          echo "${{ github }}"
   build:
     needs: test
     runs-on: ubuntu-latest
