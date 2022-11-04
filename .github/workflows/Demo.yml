@@ -34,7 +34,14 @@ jobs:
       - name: Lint code
         run: npm run lint
       - name: Test code
+        id: testCode
         run: npm run test
+      - name: upload test report
+        if: !testCode
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-report
+          path: test.json
   build:
     needs: test
     runs-on: ubuntu-latest
