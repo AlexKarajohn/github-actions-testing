@@ -17,7 +17,7 @@ jobs:
           echo "$TEST2"
           echo "${{env.TEST2}}"
           echo "${{env.TEST}}"
-          echo "${{ secrets.TEST_SECRET }}"
+          echo "${{ secrets.TEST_SECRET }}+1"
   test:
     runs-on: ubuntu-latest
     steps:
