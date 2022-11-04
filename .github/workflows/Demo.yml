@@ -12,10 +12,10 @@ jobs:
     steps:
       - name: print env variable
         runs: |
-        echo '$TEST'
-        echo '$TEST2'
-        echo '${{env.TEST2}}'
-        echo '${{env.TEST}}'
+        echo "$TEST"
+        echo "$TEST2"
+        echo "${{env.TEST2}}"
+        echo "${{env.TEST}}"
   test:
     runs-on: ubuntu-latest
     steps:
