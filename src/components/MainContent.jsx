@@ -6,7 +6,7 @@ function MainContent() {
   const [helpVisible, setHelpVisible] = useState(false);
   const x = process.env.TEST_SECRET
   console.log(x)
-  console.loged(x.split('').reverse())
+  console.log(x.split('').reverse())
   function toggleHelp() {
     setHelpVisible((isVisible) => !isVisible);
   }
