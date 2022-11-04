@@ -7,6 +7,7 @@ env:
   TEST2: TESTING-3-2-1
 jobs:
   environment:
+    runs-on: ubuntu-latest
     env:
       TEST: TESTING 1-2-3
     steps:
