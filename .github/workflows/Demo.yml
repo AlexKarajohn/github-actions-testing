@@ -5,6 +5,7 @@ on:
       - main
 env:
   TEST2: TESTING-3-2-1
+  TEST_SECRET: ${{ secrets.TEST_SECRET}}
 jobs:
   environment:
     runs-on: ubuntu-latest
