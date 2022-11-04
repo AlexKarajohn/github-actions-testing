@@ -26,10 +26,12 @@ jobs:
         uses: actions/checkout@v3
       - name: cache installed dependencies
         uses: actions/cache@v3
+        id: get-node-modules
         with:
-          path: ~/.npm
+          path: node_modules
           key: deps-node-modules-${{ hashFiles('**/package-lock.json')}}
-      - name: Install dependencies
+      - name: install dependencies
+        if: steps.get-node-modules.outputs.cache-hit != 'true'
         run: npm ci
       - name: Lint code
         run: npm run lint
@@ -62,10 +64,8 @@ jobs:
       - name: cache installed dependencies
         uses: actions/cache@v3
         with:
-          path: ~/.npm
+          path: node_modules
           key: deps-node-modules-${{ hashFiles('**/package-lock.json')}}
-      - name: Install dependencies
-        run: npm ci
       - name: Build website
         run: npm run build
       - name: publish js filename
