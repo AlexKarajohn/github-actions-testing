@@ -11,7 +11,7 @@ jobs:
       TEST: TESTING 1-2-3
     steps:
       - name: print env variable
-        runs: |
+        run: |
           echo "$TEST"
           echo "$TEST2"
           echo "${{env.TEST2}}"
